@@ -9,6 +9,26 @@
 
 /**
  * <summary>
+ *   BLE interface (UART) configuration bits used with BLE_Init().
+ * </summary>
+ */
+const
+{
+  BLE_1_STOPBIT   = 0b0000000000000001, // 1 stop bit
+  BLE_2_STOPBIT   = 0b0000000000000010, // 2 stop bits
+  BLE_PARITY_NONE = 0b0000000000000000, // no parity
+  BLE_PARITY_ODD  = 0b0000000000000100, // odd parity
+  BLE_PARITY_EVEN = 0b0000000000001000, // even parity
+  BLE_7_DATABIT   = 0b0000000000000000, // 7 data bits
+  BLE_8_DATABIT   = 0b0000000000010000, // 8 data bits
+  BLE_FLOW_NONE   = 0b0000000000000000, // no flow control
+  BLE_FLOW_RTSCTS = 0b0000000001000000, // RTS/CTS handshake
+  BLE_FULL_DUPLEX = 0b0000000000000000,
+  BLE_HALF_DUPLEX = 0b0000000100000000,
+};
+
+/**
+ * <summary>
  *   Initialise BLE interface.
  * </summary>
  *
@@ -116,6 +136,26 @@ native BLE_Write(ble, const data{}, len);
  * </returns>
  */
 native BLE_Setbuf(ble, rxbuf{}, rxlen, txbuf{}, txlen);
+
+/**
+ * <summary>
+ *   LoRa interface (UART) configuration bits used with LoRa_Init().
+ * </summary>
+ */
+const
+{
+  LORA_1_STOPBIT   = 0b0000000000000001, // 1 stop bit
+  LORA_2_STOPBIT   = 0b0000000000000010, // 2 stop bits
+  LORA_PARITY_NONE = 0b0000000000000000, // no parity
+  LORA_PARITY_ODD  = 0b0000000000000100, // odd parity
+  LORA_PARITY_EVEN = 0b0000000000001000, // even parity
+  LORA_7_DATABIT   = 0b0000000000000000, // 7 data bits
+  LORA_8_DATABIT   = 0b0000000000010000, // 8 data bits
+  LORA_FLOW_NONE   = 0b0000000000000000, // no flow control
+  LORA_FLOW_RTSCTS = 0b0000000001000000, // RTS/CTS handshake
+  LORA_FULL_DUPLEX = 0b0000000000000000,
+  LORA_HALF_DUPLEX = 0b0000000100000000,
+};
 
 /**
  * <summary>
