@@ -83,7 +83,6 @@ const
   RS232_FLOW_RTSCTS = 0b0000000001000000, // RTS/CTS handshake
   RS232_FULL_DUPLEX = 0b0000000000000000,
   RS232_HALF_DUPLEX = 0b0000000100000000,
-  RS232_3V3_ON      = 0b0000001000000000, // Enable 3V3 output voltage
 };
 
 /**
@@ -114,10 +113,6 @@ const
  *   Bit 8
  * 	   0 = full duplex
  *     1 = half duplex
- *   Bit 9
- * 	   0 = 3V3 output voltage OFF
- *     1 = 3V3 output voltage ON
- *     NOTE: Function not available on all devices !
  * </param>
  * <param name="funcidx">
  *   Index of RS232 receive function.
